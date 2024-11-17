@@ -1,0 +1,17 @@
+18:18:33 **** Build of configuration Debug for project IR_emitter ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "IR_emitter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\maela\Cloud\Projet 2A\stm\IR_emitter\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="IR_emitter.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: IR_emitter.elf
+ 
+arm-none-eabi-size  IR_emitter.elf 
+arm-none-eabi-objdump -h -S IR_emitter.elf  > "IR_emitter.list"
+   text	   data	    bss	    dec	    hex	filename
+  34412	    468	   4356	  39236	   9944	IR_emitter.elf
+Finished building: default.size.stdout
+ 
+Finished building: IR_emitter.list
+ 
+
+18:18:35 Build Finished. 0 errors, 0 warnings. (took 1s.885ms)
+

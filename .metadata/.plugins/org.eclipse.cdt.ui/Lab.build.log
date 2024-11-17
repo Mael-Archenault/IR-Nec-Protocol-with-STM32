@@ -1,0 +1,24 @@
+00:15:38 **** Incremental Build of configuration Debug for project Lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l4xx_it.d" -MT"Core/Src/stm32l4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_it.o"
+../Core/Src/stm32l4xx_it.c: In function 'TIM4_IRQHandler':
+../Core/Src/stm32l4xx_it.c:242:11: warning: implicit declaration of function 'SERIAL_SendInt' [-Wimplicit-function-declaration]
+  242 |           SERIAL_SendInt(values1[dataCount-100]);
+      |           ^~~~~~~~~~~~~~
+../Core/Src/stm32l4xx_it.c:244:11: warning: implicit declaration of function 'SERIAL_SendNL' [-Wimplicit-function-declaration]
+  244 |           SERIAL_SendNL();
+      |           ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\maela\Cloud\ENSEA\S7\Microprocesseur\TP\Lab\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab.elf
+ 
+arm-none-eabi-size  Lab.elf 
+arm-none-eabi-objdump -h -S Lab.elf  > "Lab.list"
+   text	   data	    bss	    dec	    hex	filename
+  36912	    468	   3180	  40560	   9e70	Lab.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab.list
+ 
+
+00:15:39 Build Finished. 0 errors, 2 warnings. (took 1s.398ms)
+

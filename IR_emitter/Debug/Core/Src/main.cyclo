@@ -1,0 +1,15 @@
+../Core/Src/main.c:74:1:__io_putchar	1
+../Core/Src/main.c:88:6:HAL_TIM_IC_CaptureCallback	3
+../Core/Src/main.c:109:6:delayMicroseconds	2
+../Core/Src/main.c:117:6:sendBit1	1
+../Core/Src/main.c:127:6:sendBit0	1
+../Core/Src/main.c:137:6:sendNecData	3
+../Core/Src/main.c:174:5:main	1
+../Core/Src/main.c:235:6:SystemClock_Config	4
+../Core/Src/main.c:285:13:MX_TIM1_Init	4
+../Core/Src/main.c:332:13:MX_TIM2_Init	4
+../Core/Src/main.c:377:13:MX_TIM5_Init	4
+../Core/Src/main.c:422:13:MX_TIM16_Init	5
+../Core/Src/main.c:484:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:519:13:MX_GPIO_Init	1
+../Core/Src/main.c:549:6:Error_Handler	1
