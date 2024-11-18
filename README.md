@@ -1,6 +1,6 @@
 # Context
 
-For an engineering school project, I needed to be able to read IR messages coming from a remote controller and to resend them via an IR LED. With my teammate, we ended up creating STM projects for each one of these two functions.
+For an engineering school project, I needed to be able to read IR messages coming from a remote controller and to resend them via an IR LED. With my teammate: GEORGE Louis, we created STM projects for each one of these two functions.
 
 # Requirement
 
